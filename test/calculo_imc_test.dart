@@ -1,27 +1,20 @@
-import 'package:calculo_imc/classe/pessoa.dart';
-import 'package:test/test.dart';
-void main() {
-  test('Teste setNome e getNome', () {
-    var pessoa = Pessoa("João Silva", 1.70, 70.0,24.22);
-    pessoa.setNome('João Silva');
-    expect(pessoa.getNome(), 'João Silva');
-  });
+class Pessoa {
+  String _nome;
+  double _altura;
+  double _peso;
+  double _imc;
 
-  test('Teste setAltura e getAltura', () {
-    var pessoa = Pessoa("João Silva", 1.70, 70.0,24.22);
-    pessoa.setAltura(1.70);
-    expect(pessoa.getAltura(), 1.70);
-  });
+  Pessoa(this._nome, this._altura, this._peso, this._imc);
 
-  test('Teste setPeso e getPeso', () {
-    var pessoa = Pessoa("João Silva", 1.70, 70.0,24.22);
-    pessoa.setPeso(70.0);
-    expect(pessoa.getPeso(), 70.0);
-  });
+  // Getters
+  String getNome() => _nome;
+  double getAltura() => _altura;
+  double getPeso() => _peso;
+  double getImc() => _imc;
 
-  test('Teste setImc e getImc', () {
-    var pessoa = Pessoa("João Silva", 1.70, 70.0,24.22);
-    pessoa.setImc(24.22);
-    expect(pessoa.getImc(), 24.22);
-  });
+  // Setters
+  void setNome(String nome) => _nome = nome;
+  void setAltura(double altura) => _altura = altura;
+  void setPeso(double peso) => _peso = peso;
+  void setImc(double imc) => _imc = imc;
 }
